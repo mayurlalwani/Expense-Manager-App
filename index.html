@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+
+    <title>Expense</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Balance</h1>
+        <h2 id="balance">0</h2>
+
+        
+        <div class="income-expense">
+
+            
+            <div class="income">
+                <h2>Income</h2>
+                <h2 id="displayIncomeAmount">0</h2>
+            </div>
+
+
+            <div class="expense">
+                <h2>Expense</h2>
+                <h2 id="displayExpenseAmount">0</h2>
+            </div>
+
+            <!-- <h1>Income | Expense</h1>
+            <h2 id="displayExpenseAmount">0</h2>
+            <h2 id="displayIncomeAmount">0</h2> -->
+            
+
+        </div>
+
+      
+
+        <div class="form-input">
+            <h2>Add Transaction</h2>
+
+            <div class="date">
+                <input type="date"></input>
+            </div>
+          
+
+            <div class="form-desc">
+                
+           
+                <input type="text" placeholder="Enter Description" name="description" id="description"></input>
+            </div>
+
+            <div class="form-amt">
+           
+                <input type="number" placeholder="Enter Amount" id="inputAmount"></input>
+            </div>
+
+            <div class="form-btn">
+            
+                <button onClick="updateLocalStorage()" type="button"  id="btnAddExpense">Add Transaction</button>
+            </div>
+        </div>
+        <h2>All Transactions</h2>
+        <div class="transactions">
+            
+
+            <ul id="list">
+
+                <li id="expenseTable"></li>
+
+            </ul>
+
+
+            </li>
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
