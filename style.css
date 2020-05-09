@@ -44,7 +44,6 @@ body{
 }
 
 
-
 /* .income-expense, .transactions{
     display:flex;
     flex-direction: column;
@@ -101,9 +100,6 @@ button{
 }
 
 .list-item{
-    border: solid 1px;
-    
-    
     justify-content: space-between;
     width: 100%;
 }
@@ -116,9 +112,9 @@ button{
   }
   
   .list li {
-    background-color: #fff;
-    box-shadow: var(--box-shadow);
-    color: #333;
+    
+    
+    
     display: flex;
     justify-content: space-between;
     position: relative;

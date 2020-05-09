@@ -17,12 +17,11 @@ const transaction = {};
 
 function addExpenseTotal(e){
     
+    const inputDescription = document.querySelector('#description');
+    const description= inputDescription.value;
 
-    
-
-    const description = document.querySelector('#description').value;
-
-    var dateControl = document.querySelector('input[type="date"]').value;
+    const inputDateControl = document.querySelector('input[type="date"]');
+    const dateControl = inputDateControl.value;
 
     const amount = inputAmount.value;
 
@@ -31,16 +30,14 @@ function addExpenseTotal(e){
     transaction.date = dateControl;
     transaction.desc = description;
     transaction.amount = amt;
-    
 
     allTransactions.push(transaction);
-
-    
 
     if(amount<0){
         totalExpense+=amt;
         expenseAmount.textContent = totalExpense;
     }
+
     else{
         totalIncome+=amt;
         incomeAmount.textContent = totalIncome;
@@ -51,20 +48,21 @@ function addExpenseTotal(e){
     bal = totalIncome + totalExpense;
     balance.textContent = bal;
 
+    console.log(allTransactions);
+
     const allExpenseHTML = allTransactions.map(exp => {
         return `<li> Date: ${exp.date} Transaction Type: ${exp.desc} Amount: ${exp.amount}</li>`
-    }).join();
+    });
 
     // expenseTable.innerHTML = allExpenseHTML;
     item.innerHTML = allExpenseHTML;
     list.appendChild(item);
-
-    transaction.date='';
-    transaction.desc='';
-    transaction.amount='';
-
+    inputAmount.value="";
+    inputDescription.value="";
+    inputDateControl.value="";
+    allTransactions=[];
+    
 }
-
 
 
 const element = document.querySelector("#btnAddExpense");
