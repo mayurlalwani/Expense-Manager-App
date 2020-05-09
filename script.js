@@ -61,12 +61,10 @@ function addExpenseTotal(e){
     inputDescription.value="";
     inputDateControl.value="";
     allTransactions=[];
-    
+    return false
 }
 
 
-const element = document.querySelector("#btnAddExpense");
+// const element = document.querySelector("#btnAddExpense");
 
-element.addEventListener("click", addExpenseTotal, false);
-
-// form.addEventListener('submit', addExpenseTotal);
+// element.addEventListener("click", addExpenseTotal, false);
