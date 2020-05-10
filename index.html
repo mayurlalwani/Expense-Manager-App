@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
-
     <title>Expense Manager App</title>
 </head>
 <body>
@@ -14,8 +12,7 @@
         <h1>Balance</h1>
         <h2 id="balance">0</h2>
 
-        <div class="income-expense">
-            
+        <div class="income-expense">  
             <div class="income">
                 <h2>Income</h2>
                 <h2 id="displayIncomeAmount">0</h2>
@@ -26,38 +23,45 @@
                 <h2 id="displayExpenseAmount">0</h2>
             </div>
 
-            <!-- <h1>Income | Expense</h1>
-            <h2 id="displayExpenseAmount">0</h2>
-            <h2 id="displayIncomeAmount">0</h2> -->
-            
         </div>
-
-    
-        <form id="form_data">
+ 
+        <form id="form">
             <div class="form-input">
                 <h2>Add Transaction</h2>
-            <div class="date">       
-                <input type="date" name="date" placeholder="Date"></input>
-                
-            </div>
-          
 
-            <div class="form-desc">
-                      
-                <input type="text" placeholder="Enter Description" id="description"></input>
+            <div class="date">       
+                <input 
+                    type="date" 
+                    name="date" 
+                    placeholder="Date">
+                </input>         
+            </div>
+
+            <div class="form-desc">      
+                <input 
+                    type="text" 
+                    placeholder="Description" 
+                    id="description" 
+                    required>
+                </input>
             </div>
 
             <div class="form-amt">
-           
-                <input type="number" placeholder="Enter Amount:(Minus sign for expense=> -100)" id="inputAmount"></input>
+                <input 
+                    type="number"
+                    placeholder="Amount(Negative(-)Expense, Positive(+)Income)"
+                    id="inputAmount"
+                    required>
+                </input>
             </div>
 
-            <div class="form-btn">
-            
-                <!-- <button type="button" id="btnAddExpense">Add Transaction</button> -->
-                <input type="submit" class="submitButton" value="Submit" onclick="return addExpenseTotal()">
+            <div class="form-btn">    
+                <input 
+                    type="submit" 
+                    class="submitButton" 
+                    value="Submit" 
+                   />
             </div>
-    
         </div>
         </form>
        
@@ -73,8 +77,6 @@
         </div>
         </div>
     </div>
-    <script src="script.js"></script>
-    
-    
+    <script src="script.js"></script>   
 </body>
 </html>
