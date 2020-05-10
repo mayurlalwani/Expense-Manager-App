@@ -14,6 +14,7 @@ let balanceTotal = 0;
 let allTransactions = [];
 const transaction = {};
 
+
 function fetchValues(e){
     e.preventDefault();
     const description = inputDescription.value;
@@ -40,16 +41,17 @@ function addExpenseTotal(description, date, amount){
         totalIncome+=amount;
         incomeAmount.textContent = totalIncome;
     }
-
     displayData();
+
 }
 
 function displayData(){
     const item = document.createElement('li');
     balanceTotal = totalIncome + totalExpense;
     balance.textContent = balanceTotal;
+    
     const allExpenseHTML = allTransactions.map(exp => {
-        return `<li> Date: ${exp.date} Transaction Type: ${exp.desc} Amount: ${exp.amount}</li>`
+        return `Date: ${exp.date} | Transaction Type: ${exp.desc} | Amount: ${exp.amount}`
     });
     item.innerHTML = allExpenseHTML;
     list.appendChild(item);
