@@ -38,6 +38,7 @@ body{
 
 ::placeholder{
     font-style: italic;
+    font-size: smaller;
 }
 
 .expense{
@@ -110,16 +111,22 @@ button{
 
 .list {
     list-style-type: none;
-    padding: 0;
-    margin-bottom: 40px;
+    /* padding: 0; */
+    /* margin-bottom: 40px; */
+    /* margin:10px 0; */
+    width: 100%;
+    margin:0
   }
   
-.list li {    
+  .list li {    
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    padding: 10px;
-    margin: 10px 0;
+    /* justify-content: space-between; */
+    /* position: relative; */
+    /* border: solid 1px; */
+    padding-bottom: 10px;
+    margin:0
+    /* width:100%; */
+    
   }
   
 .list li.plus {
