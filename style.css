@@ -15,7 +15,7 @@ body{
     display: flex;
     width:50vh;
     flex-direction: column;
-    border:5px solid;
+    border:3px solid;
     background-color: #2A2A40;
     color:white;
 }
@@ -24,7 +24,8 @@ body{
     display: flex;
     justify-content: space-evenly;
     border:solid 1px;
-    background-color:skyblue;
+    background-color:white;
+    
     
 }
 
@@ -32,7 +33,11 @@ body{
     /* border: solid 1px; */
     width:50%;
     text-align: center;
-    color:green;
+    color:#4eff4e;
+}
+
+::placeholder{
+    font-style: italic;
 }
 
 .expense{
